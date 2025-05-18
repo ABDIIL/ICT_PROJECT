@@ -50,4 +50,44 @@ Winkels/webshops komen en gaan. Daarom zorgen we ervoor dat nieuwe winkels APIâ€
 
 ---
 
+# User Jurneys (Mermaid)
+---
+config:
+  theme: base
+---
+journey
+    title USER JOURNEY
+    section Aanmelden & Collectie
+      Registreren & Inloggen: 3: Gebruiker
+      Winkel/platform selectie: 3: Gebruiker
+      Data automatisch importeren: 4: Curator
+      Collectie weergeven en beheren: 3: Curator
+      Collectie synchroniseren: 4: Curator
+    section Games zoeken & Media
+      Games zoeken: 5: Gebruiker
+      Data importeren: 5: Curator
+      Afbeeldingen en trailers tonen: 4: Curator
+      Media afspelen: 4: Curator
+      Media stoppen indien nodig: 4: Curator
+      Media toevoegen: 3: Gebruiker
+      Media validatie: 4: Curator
+    section Games beoordelen & Aanbevelingen
+      Games beoordelen: 4: Gebruiker
+      Data verwerken en synchroniseren: 4: Curator
+      Aanbeveling genereren: 4: Curator
+      Aanbeveling tonen: 5: Curator
+      Aanbeveling overzicht bekijken: 4: Gebruiker
+      Kopen & Doneren: 4: Gebruiker
+    section Prijs
+      Prijsgeschiedenis opvolgen & Weergeven: 4: Curator
+      Prijs meldingen instellen: 4: Gebruiker
+      Prijs verandering volgen: 4: Curator
+      Prijs melding sturen: 5: Curator
+      Game kopen: 4: Gebruiker
+      Aankoop registreren: 4: Curator 
+
+
+
+
+
 
