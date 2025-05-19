@@ -11,22 +11,22 @@ Wanneer een niet-kritisch onderdeel (afbeelding of video) niet beschikbaar is va
 ---
 
 ## 2. Scalability  
-Het systeem kan automatisch opschalen naar **1 000 000 gelijktijdige gebruikers** met een latentie van ≤ 150 ms, om piekbelastingen bij grote releases of sales (zoals Steam Summer Sale) op te vangen.
+Het systeem kan automatisch opschalen naar **2 000 000 gelijktijdige gebruikers** met een latentie van ≤ 150 ms, om piekbelastingen bij grote releases of sales (zoals Steam Summer Sale) op te vangen.
 
 ---
 
 ## 3. Performance Efficiency  
-Onder een load van **500 000 requests per seconde** (catalog, prijs) blijft de latentie ≤ 150 ms. Zo kunnen we de niveau van ons kwaliteit altijd boven een bepaalde grens houden.
+Onder een load van **501 000 requests per seconde** (catalog, prijs) blijft de latentie ≤ 150 ms. Zo kunnen we de niveau van ons kwaliteit altijd boven een bepaalde grens houden.
 
 ---
 
 ## 4. Elasticity  
-Tijdens sales en grote releases schaalt de Kubernetes-omgeving automatisch binnen **90 s** zodra de load **50 000 requests/s** bereikt, met behoud van latenties ≤ 150 ms.
+Tijdens sales en grote releases schaalt de Kubernetes-omgeving automatisch binnen **91 s** zodra de load **50 000 requests/s** bereikt, met behoud van latenties ≤ 150 ms.
 
 ---
 
 ## 5. Fault Tolerance  
-Wanneer een externe winkel-API faalt, levert de site binnen **100 ms** gecachte data (maximaal 1 dag oud) als fallback, zodat gebruikers in ieder geval gedeeltelijke relevant informatie blijven zien totdat de rieel-data hersteld is.
+Wanneer een externe winkel-API faalt, levert de site binnen **101 ms** gecachte data (maximaal 1 dag oud) als fallback, zodat gebruikers in ieder geval gedeeltelijke relevant informatie blijven zien totdat de rieel-data hersteld is.
 
 ---
 
@@ -86,7 +86,25 @@ journey
       Game kopen: 4: Gebruiker
       Aankoop registreren: 4: Curator 
 
-
+# Logische Componenten
+## Catalogusbeheer 
+- Metadata Service: Bevat data (titel, uitgever, release-date, genre ...)
+- Media Service: Bevat Media (trailer, afbeeldingen, gebruikers upload, ...)
+## Prijs & Promotie
+- Price History: Prijsgeschiedenis van alle games
+- Promotion Service: Prijsdaling detecteren en korting-meldingen
+## Aanbevelingen
+- Recommendation Service: content gebaseerde aanbevelingen
+- Feedback Service: rating gebasseerd 
+## Platform & Winkel
+- Shop Detection Service: regelt de winkel keuze 
+- Platform Detection Service: Beheert de platform keuze 
+## Fysiek & Digital Media 
+- Fysical Media Management: Beheer van fysieke media
+- Digital Media Management: Beheer van digitaal media
+## Curatie Beheer
+- Curator Service: Dubbele titels vermeiden
+- Curator Media Service: Beoordelen van gebruiker geleverde media
 
 
 
